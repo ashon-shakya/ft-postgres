@@ -1,0 +1,52 @@
+POST http://localhost:3000/api/v1/users/
+Content-Type: application/json
+
+{
+    "name" : "bob2",
+    "email" : "bob2@gmail.com",
+    "password" : "test"
+}
+
+
+###
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email" : "bob2@gmail.com",
+    "password" : "test"
+}
+
+### fetch user data
+GET http://localhost:3000/api/v1/auth/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjgxOTU3LCJleHAiOjE3NDczNjgzNTd9.LK4Kf3i7UItrG-6SFWKd4vXvqt_q_aDb4SvGU_-q_48
+
+###
+# CREATE TRANSACTION
+POST http://localhost:3000/api/v1/transactions
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+Content-Type: application/json
+
+{
+    "type": "income",
+    "amount" : 1000,
+    "tDate" : "02-24-2024",
+    "title" : "Salary"
+}
+
+###
+GET http://localhost:3000/api/v1/transactions
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MTc5ODM4LCJleHAiOjE3NDcyNjYyMzh9.fvuxlw6UqlxajM-1H2BpMQ02ljzoh3Q9bpKl4powyeM
+
+###
+DELETE http://localhost:3000/api/v1/transactions/682533824aa259696f188490
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+
+### bulk delete
+DELETE http://localhost:3000/api/v1/transactions
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+Content-Type: application/json
+
+{
+    "ids" : ["681bf229ad1791a1d75f8e76"]
+}
