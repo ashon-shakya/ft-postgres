@@ -1,9 +1,9 @@
-POST http://localhost:3000/api/v1/users/
+POST http://localhost:3000/api/v1/users
 Content-Type: application/json
 
 {
-    "name" : "bob2",
-    "email" : "bob2@gmail.com",
+    "name" : "bob1",
+    "email" : "bob1@gmail.com",
     "password" : "test"
 }
 
@@ -13,18 +13,18 @@ POST http://localhost:3000/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email" : "bob2@gmail.com",
+    "email" : "bob1@gmail.com",
     "password" : "test"
 }
 
 ### fetch user data
 GET http://localhost:3000/api/v1/auth/user
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjgxOTU3LCJleHAiOjE3NDczNjgzNTd9.LK4Kf3i7UItrG-6SFWKd4vXvqt_q_aDb4SvGU_-q_48
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjFAZ21haWwuY29tIiwiaWF0IjoxNzcxNzI1NTc2LCJleHAiOjE3NzE4MTE5NzZ9.D9BpaklNf62JytVmpnN36jhaznA0tMWlWlQU2e0mceI
 
 ###
 # CREATE TRANSACTION
 POST http://localhost:3000/api/v1/transactions
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjFAZ21haWwuY29tIiwiaWF0IjoxNzcxNzI1NTc2LCJleHAiOjE3NzE4MTE5NzZ9.D9BpaklNf62JytVmpnN36jhaznA0tMWlWlQU2e0mceI
 Content-Type: application/json
 
 {
@@ -36,17 +36,17 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/api/v1/transactions
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MTc5ODM4LCJleHAiOjE3NDcyNjYyMzh9.fvuxlw6UqlxajM-1H2BpMQ02ljzoh3Q9bpKl4powyeM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjFAZ21haWwuY29tIiwiaWF0IjoxNzcxNzI1NTc2LCJleHAiOjE3NzE4MTE5NzZ9.D9BpaklNf62JytVmpnN36jhaznA0tMWlWlQU2e0mceI
 
 ###
-DELETE http://localhost:3000/api/v1/transactions/682533824aa259696f188490
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+DELETE http://localhost:3000/api/v1/transactions/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjFAZ21haWwuY29tIiwiaWF0IjoxNzcxNzI1NTc2LCJleHAiOjE3NzE4MTE5NzZ9.D9BpaklNf62JytVmpnN36jhaznA0tMWlWlQU2e0mceI
 
 ### bulk delete
 DELETE http://localhost:3000/api/v1/transactions
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjJAZ21haWwuY29tIiwiaWF0IjoxNzQ3MjY4MDY2LCJleHAiOjE3NDczNTQ0NjZ9.BQwKM6jhmSgLUsQQy69_mAgLpCac44NPibnRtRV70qM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvYjFAZ21haWwuY29tIiwiaWF0IjoxNzcxNzI1NTc2LCJleHAiOjE3NzE4MTE5NzZ9.D9BpaklNf62JytVmpnN36jhaznA0tMWlWlQU2e0mceI
 Content-Type: application/json
 
 {
-    "ids" : ["681bf229ad1791a1d75f8e76"]
+    "ids" : [4,6]
 }

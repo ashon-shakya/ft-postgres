@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Mongo connection
-conMongoDb();
+// conMongoDb();
 
 // Middlewares
 app.use(express.json());

@@ -1,8 +1,11 @@
 import express from "express";
-import { createUser } from "../controllers/userController.js";
+import { createUser, createUserPG } from "../controllers/userController.js";
 import { logger } from "../middlewares/logMiddleware.js";
 const router = express.Router();
 
-router.post("/", logger, createUser);
-
+if (process.env.DB == "mongo") {
+  router.post("/", logger, createUser);
+} else {
+  router.post("/", createUserPG);
+}
 export default router;
